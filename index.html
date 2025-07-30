@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conéctate al Wi-Fi de ElenaLu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 15px;
+      background: #007AFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    #qr {
+      max-width: 250px;
+      margin: 20px auto;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Conéctate a ElenaLu12_5G</h1>
+  <p id="message">Detectando tu dispositivo...</p>
+
+  <a id="iosBtn" class="btn" href="wifi.mobileconfig" style="display:none;">
+    Instalar perfil Wi-Fi (iPhone)
+  </a>
+
+  <a id="androidBtn" class="btn" href="intent:#Intent;action=android.settings.WIFI_SETTINGS;end" style="display:none;">
+    Abrir ajustes Wi-Fi (Android)
+  </a>
+
+  <div id="qrContainer" style="display:none;">
+    <p>Escanea este código QR desde otro dispositivo:</p>
+    <img id="qr" src="https://api.qrserver.com/v1/create-qr-code/?data=WIFI%3AT%3AWPA%3BS%3AElenaLu12_5G%3BP%3AElenaLu1202%3B%3B" alt="Código QR Wi-Fi">
+  </div>
+
+  <script>
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+      document.getElementById('message').innerText = 'Estás usando un iPhone';
+      document.getElementById('iosBtn').style.display = 'inline-block';
+    } else if (/android/i.test(ua)) {
+      document.getElementById('message').innerText = 'Estás usando un Android';
+      document.getElementById('androidBtn').style.display = 'inline-block';
+      document.getElementById('qrContainer').style.display = 'block';
+      document.getElementById('qr').style.display = 'block';
+    } else {
+      document.getElementById('message').innerText = 'Sistema no reconocido. Usa el QR.';
+      document.getElementById('qrContainer').style.display = 'block';
+      document.getElementById('qr').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

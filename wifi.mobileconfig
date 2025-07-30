@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>AutoJoin</key>
+      <true/>
+      <key>EncryptionType</key>
+      <string>WPA2</string>
+      <key>HIDDEN_NETWORK</key>
+      <false/>
+      <key>Password</key>
+      <string>ElenaLu1202</string>
+      <key>SSID_STR</key>
+      <string>ElenaLu12_5G</string>
+      <key>PayloadDescription</key>
+      <string>Configura el Wi-Fi automáticamente</string>
+      <key>PayloadDisplayName</key>
+      <string>Wi-Fi Config</string>
+      <key>PayloadIdentifier</key>
+      <string>com.elenalu.wifi</string>
+      <key>PayloadOrganization</key>
+      <string>ElenaLu</string>
+      <key>PayloadType</key>
+      <string>com.apple.wifi.managed</string>
+      <key>PayloadUUID</key>
+      <string>11111111-2222-3333-4444-555555555555</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+    </dict>
+  </array>
+  <key>PayloadDisplayName</key>
+  <string>Perfil Wi-Fi Automático</string>
+  <key>PayloadIdentifier</key>
+  <string>com.elenalu.wifi.profile</string>
+  <key>PayloadOrganization</key>
+  <string>ElenaLu</string>
+  <key>PayloadRemovalDisallowed</key>
+  <false/>
+  <key>PayloadType</key>
+  <string>Configuration</string>
+  <key>PayloadUUID</key>
+  <string>aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+</dict>
+</plist>
