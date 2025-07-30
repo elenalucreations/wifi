@@ -29,6 +29,11 @@
       margin: 20px auto;
       display: none;
     }
+    .note {
+      font-size: 14px;
+      color: #333;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -37,8 +42,11 @@
   <p id="message">Detectando tu dispositivo...</p>
 
   <a id="iosBtn" class="btn" href="wifi.mobileconfig" style="display:none;">
-    Instalar perfil Wi-Fi (iPhone)
+    Descargar perfil de Wi-Fi (iPhone)
   </a>
+  <p id="iosNote" class="note" style="display:none;">
+    Después de descargarlo, busca “perfil” desde la pantalla de inicio de tu iPhone 📱 y toca Instalar.
+  </p>
 
   <a id="androidBtn" class="btn" href="intent:#Intent;action=android.settings.WIFI_SETTINGS;end" style="display:none;">
     Abrir ajustes Wi-Fi (Android)
@@ -55,6 +63,7 @@
     if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
       document.getElementById('message').innerText = 'Estás usando un iPhone';
       document.getElementById('iosBtn').style.display = 'inline-block';
+      document.getElementById('iosNote').style.display = 'block';
     } else if (/android/i.test(ua)) {
       document.getElementById('message').innerText = 'Estás usando un Android';
       document.getElementById('androidBtn').style.display = 'inline-block';
